@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-red-50 to-red-100 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-red-800 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold"> Gafint</div>
+            <div class="space-x-6">
+                <a href="index.html" class="hover:text-red-200 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-red-200 transition duration-300">About</a>
+                <a href="gallery.html" class="hover:text-red-200 transition duration-300">Gallery Project</a>
+                <a href="calculator.html" class="hover:text-red-200 transition duration-300">Calculator</a>
+                <a href="registrasion.html" class="hover:text-red-200 transition duration-300">Registration</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 flex-grow">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-4xl font-extrabold text-red-900 text-center mb-8">My Calculator</h1>
+            <div class="grid grid-cols-4 gap-4">
+                <input type="text" id="display" disabled class="col-span-4 text-right p-4 text-xl border rounded-lg bg-gray-50 text-gray-700">
+
+                <!-- Number and Operation Buttons -->
+                <button onclick="press('7')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">7</button>
+                <button onclick="press('8')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">8</button>
+                <button onclick="press('9')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">9</button>
+                <button onclick="press('/')" class="bg-red-300 hover:bg-red-400 p-4 rounded-lg text-white font-bold">/</button>
+
+                <button onclick="press('4')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">4</button>
+                <button onclick="press('5')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">5</button>
+                <button onclick="press('6')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">6</button>
+                <button onclick="press('*')" class="bg-red-300 hover:bg-red-400 p-4 rounded-lg text-white font-bold">*</button>
+
+                <button onclick="press('1')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">1</button>
+                <button onclick="press('2')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">2</button>
+                <button onclick="press('3')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">3</button>
+                <button onclick="press('-')" class="bg-red-300 hover:bg-red-400 p-4 rounded-lg text-white font-bold">-</button>
+
+                <button onclick="press('0')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold col-span-2">0</button>
+                <button onclick="press('.')" class="bg-red-100 hover:bg-red-200 p-4 rounded-lg text-red-800 font-bold">.</button>
+                <button onclick="press('+')" class="bg-red-300 hover:bg-red-400 p-4 rounded-lg text-white font-bold">+</button>
+
+                <!-- Function Buttons -->
+                <button onclick="clearDisplay()" class="bg-red-600 hover:bg-red-700 p-4 rounded-lg text-white font-bold col-span-2">C</button>
+                <button onclick="calculate()" class="bg-red-800 hover:bg-red-900 p-4 rounded-lg text-white font-bold col-span-2">=</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-800 text-white py-4 shadow-md">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Gafint. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let displayValue = "";
+
+        function press(value) {
+            displayValue += value;
+            document.getElementById("display").value = displayValue;
+        }
+
+        function clearDisplay() {
+            displayValue = "";
+            document.getElementById("display").value = displayValue;
+        }
+
+        function calculate() {
+            try {
+                const result = eval(displayValue);
+                displayValue = result.toString();
+                document.getElementById("display").value = result;
+            } catch (error) {
+                document.getElementById("display").value = "Error";
+                displayValue = "";
+            }
+        }
+    </script>
+</body>
+</html>

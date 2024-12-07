@@ -1,0 +1,22 @@
+/* Custom CSS untuk penyesuaian tambahan */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Tambahan gaya untuk interaksi */
+button:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+input:focus, button:focus {
+    outline: 2px solid #3B82F6;
+    border-color: #3B82F6;
+}
+
+/* Gaya untuk pesan error */
+[id$="Error"] {
+    color: #EF4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}

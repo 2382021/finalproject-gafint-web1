@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-red-50 to-red-100 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-red-800 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Gafint</div>
+            <div class="space-x-6">
+                <a href="index.html" class="hover:text-red-200 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-red-200 transition duration-300">About</a>
+                <a href="gallery.html" class="hover:text-red-200 transition duration-300">Gallery Project</a>
+                <a href="calculator.html" class="hover:text-red-200 transition duration-300">Calculator</a>
+                <a href="registrasion.html" class="hover:text-red-200 transition duration-300">Registration</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 flex-grow flex justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+            <h2 class="text-2xl font-bold text-red-900 text-center mb-6">Registration Form</h2>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-red-800 font-semibold mb-2">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        class="w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+                        placeholder="Enter your full name"
+                    >
+                </div>
+                <div>
+                    <label for="phone" class="block text-red-800 font-semibold mb-2">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required 
+                        class="w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+                        placeholder="Enter your phone number"
+                    >
+                </div>
+                <div>
+                    <label for="email" class="block text-red-800 font-semibold mb-2">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        class="w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+                        placeholder="Enter your email address"
+                    >
+                </div>
+                <div>
+                    <label for="password" class="block text-red-800 font-semibold mb-2">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        class="w-full p-3 border border-red-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+                        placeholder="Create a password"
+                    >
+                </div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-red-800 text-white py-3 rounded-lg hover:bg-red-900 transition duration-300"
+                >
+                    Register
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-800 text-white py-4 shadow-md">
+        <div class="container mx-auto text-center">
+            © 2024 Gafint. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
